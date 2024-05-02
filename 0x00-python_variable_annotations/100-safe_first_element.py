@@ -8,7 +8,8 @@ def safe_first_element(lst: Sequence[Any]) -> Optional[Any]:
     Safely retrieves the first element of a list
 
     Parameters:
-    lst (Sequence[Any]): A sequence of elements, where the type of elements is unknown.
+    lst (Sequence[Any]): A sequence of elements, where
+    the type of elements is unknown.
 
     Return:
     Optional[Any]: The first element of the list, or
