@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+""" Shebang to run a python script"""
+
 def add(a: float, b: float) -> float:
     """
     Adds a and b as arguments.
