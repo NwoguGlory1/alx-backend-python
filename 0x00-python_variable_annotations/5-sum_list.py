@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
-This script demonstrates the use of type annotations in Python to specify
-the expected type of variables.
+This script demonstrates the use of typing module
+to specify type of collection like list.
 """
 from typing import List
 """ imports typing module"""
