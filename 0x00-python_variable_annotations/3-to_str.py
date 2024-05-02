@@ -4,14 +4,14 @@ import math
 """ imports math module """
 
 
-def floor(n: float) -> int:
+def to_str(n: float) -> str:
     """
-    Computes the floor of the float n.
+    Converts a float to its string representation.
 
     Parameters:
-    n (float): The float number.
+    n (float): The float to be converted to a string.
 
     Returns:
-    An integer which is the floor of n.
+    str: The string representation of the float.
     """
-    return math.floor(n)
+    return str(n)
