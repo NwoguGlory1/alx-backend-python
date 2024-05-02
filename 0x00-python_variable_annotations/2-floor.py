@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
+""" Shebang that tells OS to execute as python script"""
 import math
+""" imports math module"""
 
 
 def floor(n: float) -> int:
