@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" Shebang to run a python script"""
+""" Shebang that tells OS to execute as python script"""
 
 
 def add(a: float, b: float) -> float:
