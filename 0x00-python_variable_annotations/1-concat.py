@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+""" Shebang that tells OS to execute as python script"""
 
 
 def concat(str1: str, str2: str) -> str:
