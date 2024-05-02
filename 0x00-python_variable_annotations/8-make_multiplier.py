@@ -6,6 +6,7 @@ the typing module to sum variables of different types.
 from typing import Callable
 """ imports Callable """
 
+
 def make_multiplier(multiplier: float) -> Callable[[float], float]:
     """
     Creates a function that multiplies a float by a given multiplier.
