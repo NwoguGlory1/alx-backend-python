@@ -1,16 +1,17 @@
 #!/usr/bin/env python3
-""" Shebang that tells OS to execute as python script"""
+""" Tells OS to execute it as python script"""
+import math
+""" imports math module """
 
 
-def concat(str1: str, str2: str) -> str:
+def floor(n: float) -> int:
     """
-    Concatenates two strings using f-string.
+    Computes the floor of the float n.
 
     Parameters:
-    str1: The first string.
-    str2: The second string.
+    n (float): The float number.
 
     Returns:
-    A concatenated string: str1str2
+    An integer which is the floor of n.
     """
-    return f"{str1}{str2}"
+    return math.floor(n)
