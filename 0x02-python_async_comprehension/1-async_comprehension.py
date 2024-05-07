@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-""" A script about async generator """
+""" A script about async comprehension """
 
 import asyncio
 import random
@@ -11,7 +11,7 @@ generator, async_generator function
 """
 
 
-async def async_comprehension() -> Generator[float, None, None]:
+async def async_comprehension() -> List[float]:
     """
     An async comprehension coroutine that takes no argument,
     collects random numbers from imported async_generator
