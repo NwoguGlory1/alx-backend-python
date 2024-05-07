@@ -1,7 +1,6 @@
 #!/usr/bin/env python3
-""" Asynchrous coroutine that executes multiple coroutine """
+""" The basic of async """
 
-import asyncio
 from asyncio import run
 from time import time
 
