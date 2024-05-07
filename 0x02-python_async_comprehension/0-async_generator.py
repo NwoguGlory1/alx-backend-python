@@ -7,7 +7,7 @@ import random
 """ imports random module """
 
 
-async def async_generator():
+async def async_generator() -> Generator[float, None, None]:
     """
     An async generator that takes no argument,
     yields random numbers between 0 and 10
