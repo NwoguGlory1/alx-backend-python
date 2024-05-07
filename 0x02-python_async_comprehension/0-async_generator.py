@@ -3,6 +3,7 @@
 
 import asyncio
 import random
+from typing import AsyncGenerator, Generator
 """ imports asyncio module """
 """ imports random module """
 
