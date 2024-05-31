@@ -3,8 +3,7 @@
 import unittest
 import requests
 from parameterized import parameterized
-from utils import access_nested_map
-from utils import get_json
+from utils import access_nested_map, get_json, memoize
 from unittest.mock import patch, Mock
 """ import the necessary modules"""
 
@@ -43,8 +42,8 @@ class TestGetJson(unittest.TestCase):
         ('http://example.com', {"payload": True}),
         ('http://holberton.io', {"payload": False}),
     ])
-    @patch('utils.requests.get')
-    def test_get_json(self, mock_get, test_url, test_payload):
+    @patch('requests.get')
+    def test_get_json(self, test_url, test_payload, mock_get):
         """ method to test that utils.get_json returns expected result"""
 
         # Create a Mock object to simulate the HTTP response
@@ -64,3 +63,29 @@ class TestGetJson(unittest.TestCase):
 
         # Verify the result of get_json matches the expected payload
         self.assertEqual(result, test_payload)
+
+
+class TestMemoize(unittest.TestCase):
+    """ Test class for memoize """
+
+    def test_memoize(self):
+        """ method to test memoize """
+
+        class TestClass:
+            def a_method(self):
+                return 42
+
+            @memoize
+            def a_property(self):
+                return self.a_method()
+
+        with patch.object(TestClass, 'a_method', return_value=42) as mock_method:
+            test_obj = TestClass()
+
+            result1 = test_obj.a_property
+            result2 = test_obj.a_property
+
+            self.assertEqual(result1, 42)
+            self.assertEqual(result2, 42)
+
+            mock_method.assert_called_once()
